@@ -1,0 +1,12 @@
+{
+  "wait": "*sedang di proses mohon tunggu sebentar*",
+  "success": "_*permintaan anda berhasil diproses*_",
+  "lv": "_*mohon maaf link yang kamu kirim tidak valid*_",
+  "api": "_*maaf terjadi kesalahan*_",
+  "cmd": "_*gunakan perintah dengan benar*_",
+  "OnlyOwner": "perintah ini hanya dapat di gunakan *owner bot*",
+  "OnlyGrup": "perintah ini hanya dapat di gunakan di *group chat*",
+  "OnlyPM": "perintah ini hanya dapat di gunakan di *pribadi chat*",
+  "GrupAdmin": "maaf perintah ini hanya dapat digunakan *admin group*",
+  "BotAdmin": "_*perintah ini hanya bisa digunakan ketika bot menjadi admin*_"
+}
