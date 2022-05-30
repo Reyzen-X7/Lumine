@@ -42,7 +42,7 @@ autorecording = false
 const mess = JSON.parse(fs.readFileSync('./data/setting/mess.json'))
 const setting = JSON.parse(fs.readFileSync("./data/setting/settings.json"))
 const { ownerName, botName, ownerNumber, apiKey } = setting 
-const { wait, success, lv, api, cmd, OnlyOwner, OnlyGrup, OnlyPM, GrupAdmin, BotAdmin } = mess
+const { wai, success, lv, api, cmd, OnlyOwner, OnlyGrup, OnlyPM, GrupAdmin, BotAdmin } = mess
 
 // - thumbnail 
 const rey = JSON.parse(fs.readFileSync(',/data/media/rey.jpg')) 
