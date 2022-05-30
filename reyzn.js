@@ -322,26 +322,6 @@ sendButDocument(from, `${menu}`, "*_© Reyzen X-671_*", fs.readFileSync('./data/
 break
 
 //- menu downloader 
-case 'play':
-if (args.length < 1) return reply(`Kirim perintah *${prefix}play query`)
-ya = ` ```${botName}```
-*• req dari :* _${pushname}_
-*• command :* _${cmd}_ 
-*• date :* _${calender - time}_
-
-*_created by ${ownerName}_* ~`
-sendButMessage(from, `${ya}`, "_klik report jika bot tidak merespon_", [{buttonId:`report ${cmd}`,buttonText:{displayText:"REPORT"},type:1}], {quoted:mek, contextInfo: { forwardingScore: 508, isForwarded: true }})
-let yut = await yts(v)
-yta(yut.videos[0].url)             
-.then(async(res) => {
-var { thumb, title, filesizeF, filesize } = res
-var capti = `𝗬𝗢𝗨𝗧𝗨𝗕𝗘 𝗣𝗟𝗔𝗬🍁\n•💬 Judul : ${yut.all[0].title}\n•🎥 ID Video : ${yut.all[0].videoId}\n•⏰️ Diupload Pada : ${yut.all[0].ago}\n•👁️️ Views : ${yut.all[0].views}\n•▶️ Durasi : ${yut.all[0].timestamp}\n•📍 Channel : ${yut.all[0].author.name}\n•🔗 Link Channel : ${yut.all[0].author.url}\n•⚡ Link Video : ${yut.videos[0].url}`
-ya = await getBuffer(thumb)
-py =await zee.prepareMessage(from, ya, image)
-sendButloc(from,monospace(capti),'',`*select the type you want to download*`,[{buttonId: `${prefix}ytmp3 ${yut.all[0].url}`, buttonText: {displayText: 'AUDIO'}, type: 1},
-{buttonId: `${prefix}ytmp4 ${yut.all[0].url}`, buttonText: {displayText: 'VIDEO'}, type: 1}],null,null,ya)
-})
-          break      
     
 default:
 
