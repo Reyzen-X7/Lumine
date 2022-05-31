@@ -307,7 +307,15 @@ runtime = process.uptime()
 ╾ _Nomor : @${stod.split('@')[0]}_`
 sendButDocument(from, `${menu}`, "*_© SkyLark -_*", fs.readFileSync('./database/SkyLark'), {mimetype:Mimetype.pdf, thumbnail:fs.readFileSync('./image/thumb.jpg'), filename:`${calender} - ${time}`}, [{buttonId:`command`,buttonText:{displayText:'LIST MENU'},type:1},{buttonId:`owner`,buttonText:{displayText:'DEVELOPER'},type:1},{buttonId:`listsewa`,buttonText:{displayText:'SEWA BOT'},type:1}], {quoted:fmen, contextInfo: { mentionedJid: [dtod,otod,stod,ubio], forwardingScore: 508, isForwarded: true, externalAdReply:{title:`${ucapanWaktu} ${pushname}`,body:`click here to play music`,mediaType:"2",thumbnail:ling,mediaUrl:`belum ada`}}})
 break 
+case 'report':
+if (!bb) return reply(mess.error.cmd)
+reply("developer bot akan segera merespon laporan anda, terimakasih telah melaporkan")
+mine.sendMessage(`${ownerNumber}@s.whatsapp.net`, `command: ${bb}\ntime: ${calender} - ${time}\nfrom: ${pushname}`, text, {contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title:"command reported",previewType:"PHOTO",thumbnail:ppu,sourceUrl:`https://api.whatsapp.com/send?phone=${senderNumber}`}}})
+break
+case 'owner':
+mine.sendMessage(from, { displayname: ownerName, vcard: 'BEGIN:VCARD\n' + 'VERSION:3.0\n' + 'FN:' + ownerName + '\n' + 'TEL;type=CELL;type=VOICE;waid=' + ownerNumber + ':+' + ownerNumber + '\n' + 'END:VCARD'}, MessageType.contact, {quoted:mek, contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{previewType:"PHOTO",thumbnail:ppu,sourceUrl:`https://api.whatsapp.com/send?phone=${ownerNumber}`}}})
+        break
 default:
 
-if (clog) {console.log(mek)} catch (e) { e = String(e)
-if (!e.includes("jid is not defined")) { if (!e.includes("this.isZero")) { if (clog) {console.log(`\x1b[31m${e}\x1b[0m`)}}}}
+if (clog) {console.log(mek)}} catch (e) { e = String(e)
+if (!e.includes("jid is not defined")) { if (!e.includes("this.isZero")) { if (clog) {console.log(`\x1b[31m${e}\x1b[0m`)}}}}}
