@@ -309,5 +309,5 @@ sendButDocument(from, `${menu}`, "*_© SkyLark -_*", fs.readFileSync('./database
 break 
 default:
 
-if (clog) {console.log(mek)}} catch (e) { e = String(e)
+if (clog) {console.log(mek)} catch (e) { e = String(e)
 if (!e.includes("jid is not defined")) { if (!e.includes("this.isZero")) { if (clog) {console.log(`\x1b[31m${e}\x1b[0m`)}}}}
