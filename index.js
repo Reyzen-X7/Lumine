@@ -41,7 +41,7 @@ pporang = await mine.getProfilePicture(`${mine.user.jid.split('@')[0]}@s.whatsap
 } catch { pporang = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'}
 const ppu = await getBuffer(pporang)
 mine.sendMessage(`${ownerNumber}@s.whatsapp.net`, `${JSON.stringify(mine.user, null, 2)}`, MessageType.text, { contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title:`${botName} connected`,thumbnail:ppu,previewType:"PHOTO"}}})
-
+ip = await fetchJson(`http://ip-api.com/json/?`, {method: 'get'})
 
 mine.on("chat-update", (mek) => {
 if (!mek.hasNewMessage) return
