@@ -10,6 +10,7 @@ const translate = require('@vitalets/google-translate-api')
 const moment = require("moment-timezone")
 const { exec } = require('child_process') 
 const simple = require('./lib/simple.js') 
+const setting = JSON.parse(fs.readFileSync("./settings.json")) 
 
 //- bagian data 
 const { text, extendedText, contact, location, liveLocation, image, video, sticker, document, audio, product } = MessageType
@@ -33,7 +34,6 @@ autorecording = false
 //- database 
 const commandsDB = JSON.parse(fs.readFileSync('./database/commands.json'))
 const scommand = JSON.parse(fs.readFileSync('./database/scommand.json')) 
-const setting = JSON.parse(fs.readFileSync("./settings.json")) 
 
 //- lib 
 const { addCommands, checkCommands, deleteCommands } = require('./lib/autoresp')
