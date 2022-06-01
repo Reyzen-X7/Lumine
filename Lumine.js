@@ -138,6 +138,8 @@ baterai.isCharge = json[2][0][1].live
     String.prototype._replaceAllString = function(s, r) {return this.split(s).join(r); }; function _filterText(str,txt,dt){if (str) {var str = str.toLowerCase(); txt = txt ? txt : "***"; dt = dt ? dt : listkata; for (var i = 0; i < dt.length; i++) {var kk = dt[i].toLowerCase(); var ii = str.search(kk); if ( ii != -1) {str = str._replaceAllString(kk,txt); } } return str; }else{ return undefined; } }
     function parseMention(text = '') { return [...text.matchAll(/@([0-9]{5,16}|0)/g)].map(v => v[1] + '@s.whatsapp.net')}
     
+    const totalchat = await mine.chats.all()
+
     const reply = (teks) => { mine.sendMessage(from, teks, text, { thumbnail: ppu, sendEphemeral: true, quoted: mek, contextInfo: { forwardingScore: 508, isForwarded: true }})}
     const sendMess = (id, teks) => { mine.sendMessage(id, teks, text, { contextInfo: { forwardingScore: 508, isForwarded: true }})} 
     const mentions = (teks, memberr, id) => { (id == null || id == undefined || id == false) ? mine.sendMessage(from, teks.trim(), extendedText, { contextInfo: { "mentionedJid": memberr }}): mine.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": memberr }})}
