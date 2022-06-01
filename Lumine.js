@@ -307,7 +307,7 @@ runtime = process.uptime()
 ╾ _Nama : ${pushname}_
 ╾ _Bio : ${ubio}_
 ╾ _Nomor : @${stod.split('@')[0]}_`
-sendButDocument(from, `${menu}`, "*_© SkyLark -_*", fs.readFileSync('./database/SkyLark'), {mimetype:Mimetype.pdf, thumbnail:fs.readFileSync('./image/thumb.jpg'), filename:`${calender} - ${time}`}, [{buttonId:`command`,buttonText:{displayText:'LIST MENU'},type:1},{buttonId:`owner`,buttonText:{displayText:'DEVELOPER'},type:1},{buttonId:`listsewa`,buttonText:{displayText:'SEWA BOT'},type:1}], {quoted:fmen, contextInfo: { mentionedJid: [dtod,otod,stod,ubio], forwardingScore: 508, isForwarded: true, externalAdReply:{title:`${ucapanWaktu} ${pushname}`,body:`click here to play music`,mediaType:"2",thumbnail:ling,mediaUrl:`belum ada`}}})
+sendButDocument(from, `${menu}`, "*_© SkyLark -_*", fs.readFileSync('./database/SkyLark'), {mimetype:Mimetype.pdf, thumbnail:fs.readFileSync('./image/thumb.jpg'), filename:`${calender} - ${time}`}, [{buttonId:`command`,buttonText:{displayText:'LIST MENU'},type:1},{buttonId:`owner`,buttonText:{displayText:'DEVELOPER'},type:1},{buttonId:`listsewa`,buttonText:{displayText:'SEWA BOT'},type:1}], {quoted:fmen, contextInfo: { mentionedJid: [dtod,otod,stod], forwardingScore: 508, isForwarded: true, externalAdReply:{title:`${ucapanWaktu} ${pushname}`,body:`click here to play music`,mediaType:"2",thumbnail:ling,mediaUrl:`belum ada`}}})
 break 
 case 'report':
 if (!bb) return reply(mess.error.cmd)
